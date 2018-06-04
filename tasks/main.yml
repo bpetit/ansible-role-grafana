@@ -42,7 +42,7 @@
     dest: "/lib/systemd/system/grafana.service"
   register: grafana_service
 
-- template:
+- copy:
     src: dashboards.yaml.j2
     dest: /opt/grafana/conf/provisioning/dashboards/dashboards.yaml
 
